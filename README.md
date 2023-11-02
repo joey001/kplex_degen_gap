@@ -1,5 +1,7 @@
 # Fast Maximum $k$-Plex Algorithms Parameterized by Small Degeneracy Gaps
 
+The work extends the conference paper "A Fast Maximum $k$-Plex Algorithm Parameterized by the Degeneracy Gap", presented in the 32nd International Joint Conference on Artificial Intelligence (IJCAI'23) in Macao on 19th August 2023.
+
 ## Files
 
 * code - codes of our algorithms and kPlexS and KpLeX.
@@ -11,7 +13,7 @@
 ```sh
 $ make
 ```
-It generates the executable (Maple, Maple$\mathrm{_{com}}$, Maple$\mathrm{_{hyb}}$, kPlexS and KpLeX).
+It generates the executable (kPlexS, KpLeX, Maple and its variants).
 
 ## Run the code
 
