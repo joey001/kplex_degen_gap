@@ -1,31 +1,27 @@
-# A Fast Maximum k-Plex Algorithm Parameterized by the Degeneracy Gap
+# Fast Maximum $k$-Plex Algorithms Parameterized by Small Degeneracy Gaps
 
-Our code is based on Chang et al.'s work on Proc. VLDB Endow. 16(2), (2022). 
-Thanks for their selfless disclosure of their source code.
+## Files
 
-Note that: 
-
-In the implementation, there is no need to explicitly build complement graphs , as we use the adjacency matrix to store subgraphs.
-
-The lower bound of both kPlexS and KpLex are simply set to at least 2k-2 to screen out trivial cases.
+* code - codes of our algorithms and kPlexS and KpLeX.
+* data - example graph instances
+* supplement - supplementary materials
 
 ## Compile the code
 
 ```sh
-$ make clean
 $ make
 ```
-It generates an executable "KPLEX", which actually corresponds to the our algorithm for optimization problem (Ours).
+It generates the executable (Maple, Maple$\mathrm{_{com}}$, Maple$\mathrm{_{hyb}}$, kPlexS and KpLeX).
 
 ## Run the code
 
 ```sh
-$ ./KPLEX {path_to_binary_compressed_graph} {k_value}
+$ ./EXE {path_to_binary_compressed_graph} {k_value}
 ```
 
 An example of computing the exact maximum 15-plex for the dataset soc-slashdot is as follows
 ```sh
-$ ./KPLEX data/soc-slashdot.bin 15
+$ ./Maple data/soc-slashdot.bin 15
 ```
 
 The solution is in output file "kplexes.txt".
@@ -40,3 +36,9 @@ $ mv ./data/soc-slashdot ./data/soc-slashdot.clq
 $ ./toBin data/soc-slashdot.clq
 $ ls data/soc-slashdot.bin
 ```
+
+Note that:
+
+The lower bound of both kPlexS and KpLex are simply set to at least 2k-2 to screen out trivial cases.
+
+And the input of kPlexS and KpLeX are modified to accept binary encoded instances.
