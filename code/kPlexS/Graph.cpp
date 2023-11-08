@@ -186,7 +186,7 @@ void Graph::verify_kplex() {
 
 void Graph::search() {
 	Timer t;
-	kplex.clear();
+	kplex.resize(2*K-2); //screen out trivial cases
 	heuristic_kplex_max_degree(10);
 	ui *seq = new ui[n];
 	ui *core = new ui[n];
@@ -609,7 +609,6 @@ void Graph::extract_subgraph_and_prune(ui u, ui *ids, ui &ids_n, ui *rid, vector
 // max-degree-based heuristic k-plex computation
 void Graph::heuristic_kplex_max_degree(ui processed_threshold) {
 	Timer t;
-	assert(kplex.empty());
 	ui *head = new ui[n];
 	ui *next = new ui[n];
 	ui *degree = new ui[n];

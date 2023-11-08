@@ -385,6 +385,7 @@ void Graph::search() {
 	// printf("*** Sub avg: %.4lf\n",(subSum+0.1)/(subCnt+0.1));
 	// printf("*** Sub max: %lld\n",subMax);
 	// printf("*** Max degree: %d\n",max_degree);
+	if(kplex.size()==2*K-2) printf("!!! Warning: Trivial Case !!!\n");
 }
 
 void Graph::write_subgraph(ui n, const vector<pair<int,int> > &edge_list) {
